@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welbeing - Sports and Fitness</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="css/js/script.js" defer></script>
+    <style>
+        /* CSS Styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #2c3e50;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+        }
+
+        .logo {
+            max-width: 100px;
+        }
+
+        h1 {
+            margin-left: 20px;
+            font-size: 2em;
+            color: #00BFFF; /* Highlight color */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00BFFF;
+        }
+
+        .hero-section {
+            background: url('images/example.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-subtext {
+            font-size: 1.5em; /* Larger font size */
+            margin-top: 10px; /* Spacing from the heading */
+            font-weight: 500; /* Semi-bold */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+            color: #FFD700; /* Gold color for emphasis */
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            padding: 10px 20px; /* Padding for a more prominent look */
+            border-radius: 5px; /* Rounded corners */
+            display: inline-block; /* Centering effect */
+        }
+
+        .explore-btn {
+            background: #00BFFF;
+            border: none;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .explore-btn:hover {
+            background: #008CBA;
+        }
+
+        #about {
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            margin: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #about h2 {
+            color: #00BFFF; /* Highlight color */
+        }
+
+        #about ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #about ul li {
+            margin: 10px 0;
+            background: #e7f3fe; /* Light blue background */
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 5px solid #00BFFF; /* Highlight left border */
+        }
+
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            transition: height 0.3s;
+        }
+
+        .chatbot-header {
+            background-color: #00BFFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between; /* Space between title and button */
+            align-items: center;
+        }
+
+        .chatbox {
+            padding: 10px;
+            overflow-y: auto;
+            height: 200px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-input {
+            border: none;
+            padding: 10px;
+            flex-grow: 1;
+        }
+
+        #send-btn {
+            background-color: #00BFFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #send-btn:hover {
+            background-color: #008CBA;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+        }
+
+        .minimize-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 18px; /* Adjust size for visibility */
+        }
+
+        .chatbox.hidden {
+            display: none; /* Hide chatbox when minimized */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/well__1_-removebg-preview.png" alt="Welbeing Logo" class="logo" />
+        <h1>Welbeing</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="calorie.html">Calorie Tracker</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-text">
+                <h2>Welcome to Welbeing</h2>
+                <p class="hero-subtext">Your one-stop platform for sports and fitness!</p>
+            </div>
+            <button onclick="window.location.href='services.html'" class="explore-btn">Explore Services</button>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Welbeing, we believe that fitness is not just about working out; it's a holistic approach to a healthier lifestyle. Here are some important aspects of our philosophy:</p>
+            <ul>
+                <li><strong>Personalized Fitness Plans:</strong> Tailored to your specific goals and lifestyle.</li>
+                <li><strong>Nutritional Guidance:</strong> Expert advice to help you make healthier food choices.</li>
+                <li><strong>Community Support:</strong> Join a community of like-minded individuals for motivation.</li>
+                <li><strong>AI Chatbot:</strong> Our AI assistant is here to answer your questions and provide guidance.</li>
+                <li><strong>Regular Challenges:</strong> Participate in fitness challenges to stay motivated and engaged.</li>
+            </ul>
+        </section>
+
+        <section id="chatbot" class="chatbot">
+            <div class="chatbot-header">
+                AI Assistant 
+                <button class="minimize-btn" onclick="minimizeChatbot()">-</button>
+            </div>
+            <div id="chatbox" class="chatbox">
+                <div class="chat-content"></div> <!-- For chat messages -->
+            </div>
+            <input type="text" id="user-input" class="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Welbeing. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // AI Chatbot functionality
+            document.getElementById('send-btn').addEventListener('click', () => {
+                const userInput = document.getElementById('user-input').value.trim();
+                if (userInput) {
+                    const chatContent = document.querySelector('.chat-content');
+
+                    // Append user message
+                    chatContent.innerHTML += `<div class="user-message"><strong>You:</strong> ${userInput}</div>`;
+                    
+                    // Simulate AI response
+                    setTimeout(() => {
+                        const aiResponse = `AI: I received your message: "${userInput}"`; // Replace with actual AI logic
+                        chatContent.innerHTML += `<div class="ai-message"><strong>${aiResponse}</strong></div>`;
+                        document.getElementById('user-input').value = ''; // Clear input
+                        chatContent.scrollTop = chatContent.scrollHeight; // Scroll to the bottom
+                    }, 1000); // Simulate a delay for AI response
+                }
+            });
+        });
+
+        let isMinimized = false;
+
+        function minimizeChatbot() {
+            const chatbox = document.getElementById('chat
